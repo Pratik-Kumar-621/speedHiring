@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="side"></div>
+    <div class="main">
+        <div class="taskIntro">
+            <div class="taskName">Interview task name goes here</div>
+            <ul class="taskItems">
+                <li>
+                    <i class="fas fa-pound-sign"></i>&nbsp;Basic Level
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>&nbsp;United States
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>&nbsp;83 Days Ago
+                </li>
+                <li>
+                    <i class="fas fa-user"></i>&nbsp;1 Candidate Level
+                </li>
+            </ul>
+        </div>
+        <div class="taskPosted">
+            <div class='postHead'>Posted By</div>
+            <div class="taskPosterProfile">
+                <img class="profileImage" src="./image 7.png" alt="image">
+                <div>
+                    <div class="profileName">Jhangalpriya</div>
+                    <div class="profileWork">Jobseeker</div>
+                </div>
+            </div>
+        </div>
+        <div class="taskCompletebtn">
+            <button class="taskButton">
+                Complete Task
+            </button>
+        </div>
+        <div class="taskBody">
+            <ul class="taskTabHead">
+                <li data-tab-target="#tab-1" class="taskTabItem active">Interview Task Calendar</li>
+                <li data-tab-target="#tab-2" class="taskTabItem">Interview Shedule Details</li>
+                <li data-tab-target="#tab-3" class="taskTabItem">Feedback</li>
+                <li data-tab-target="#tab-4" class="taskTabItem">Communication</li>
+            </ul>
+            <div class="taskTabContent">
+
+                <div class="tabContent active" id="tab-1" data-tab-content>
+                    <div class="taskUpdateButton">Update</div>
+                    <ul class="calendarList">
+                        <li class="calendarItem">
+                            <div class="calendarItemDate">
+                                <div class="date">03</div>
+                                <div class="month">October</div>
+                            </div>
+                            <ul class="calendarItemShedule">
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                            </ul>
+                        </li>
+                        <li class="calendarItem">
+                            <div class="calendarItemDate">
+                                <div class="date">03</div>
+                                <div class="month">October</div>
+                            </div>
+                            <ul class="calendarItemShedule">
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                                <li class="sheduleTime">02:30 pm - 03:00 pm</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabContent" id="tab-2" data-tab-content>2</div>
+
+                <div class="tabContent" id="tab-3" data-tab-content>3</div>
+
+                <div class="tabContent" id="tab-4" data-tab-content>4</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+
+</html>

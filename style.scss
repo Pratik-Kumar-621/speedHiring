@@ -1,0 +1,187 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e5e5e5;
+  display: grid;
+  grid-template-columns: 300px auto;
+  font-family: "Manrope", sans-serif;
+  .main {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 20px 30px 20px 20px;
+
+    .taskIntro {
+      .taskName {
+        font-weight: 600;
+        font-size: 14px;
+        color: #333;
+      }
+      .taskItems {
+        list-style-type: none;
+        display: flex;
+        margin: 5px 0;
+        padding: 0;
+        > li {
+          font-size: 12px;
+          font-weight: 600;
+          padding: 0 12px 0 0;
+          color: #999999;
+          > i {
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .taskPosted {
+      .postHead {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+      .taskPosterProfile {
+        display: flex;
+        align-items: center;
+        .profileImage {
+          width: 26px;
+          height: 26px;
+          margin: 0 10px 0 0;
+        }
+        .profileName {
+          font-size: 14px;
+          font-weight: 600;
+          color: #2770fb;
+          text-decoration: underline;
+        }
+        .profileWork {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .taskCompletebtn {
+      grid-column: 1/-1;
+      .taskButton {
+        width: 104px;
+        height: 34px;
+        background: #2770fb;
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        &:hover {
+          background: #053fac;
+          cursor: pointer;
+        }
+        &:active {
+          background: #001c4e;
+        }
+      }
+    }
+
+    .taskBody {
+      margin-top: 45px;
+      grid-column: 1/-1;
+      .taskTabHead {
+        display: flex;
+        list-style-type: none;
+        font-size: 14px;
+        color: #333333;
+        padding: 0;
+        margin: 0;
+        .taskTabItem {
+          padding: 7px 24px;
+          transition: all 0.1s linear;
+          border-radius: 4px 4px 0 0;
+          &:hover {
+            cursor: pointer;
+            background: rgb(245, 245, 245);
+          }
+        }
+        .active {
+          transition: all 0.1s ease-in;
+          background: #fff;
+          color: #333333;
+          font-weight: 700;
+        }
+      }
+      .taskTabContent {
+        background: #fff;
+        border-radius: 4px;
+        min-height: 50vh;
+        .tabContent {
+          padding: 20px 30px;
+          .taskUpdateButton {
+            text-align: right;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration-line: underline;
+            color: #2770fb;
+            width: 50px;
+            margin-left: auto;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              cursor: pointer;
+              color: #053fac;
+            }
+            &:active {
+              color: #001c4e;
+            }
+          }
+          .calendarList {
+            margin: 25px 0 0 0;
+            padding: 0 0 0 16px;
+            list-style-type: none;
+            .calendarItem {
+              margin: 0 0 35px 0;
+              display: flex;
+              .calendarItemDate {
+                color: #333333;
+                font-weight: 600;
+                .date {
+                  font-size: 24px;
+                }
+                .month {
+                  font-size: 14px;
+                }
+              }
+            }
+            .calendarItemShedule {
+              margin: 0 0 0 51px;
+              padding: 10px 24px;
+              width: 100%;
+              .sheduleTime {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                color: #333333;
+                background: rgba(39, 112, 251, 0.1);
+                border-radius: 84px;
+                width: 150px;
+                height: 30px;
+                margin: 3px 4px;
+                color: #333333;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[data-tab-content] {
+  display: none;
+}
+.active[data-tab-content] {
+  display: block;
+}

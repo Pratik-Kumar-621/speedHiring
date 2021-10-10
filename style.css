@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #e5e5e5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px auto;
+      grid-template-columns: 300px auto;
+  font-family: "Manrope", sans-serif;
+}
+
+body .main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  padding: 20px 30px 20px 20px;
+}
+
+body .main .taskIntro .taskName {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+body .main .taskIntro .taskItems {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0;
+  padding: 0;
+}
+
+body .main .taskIntro .taskItems > li {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 12px 0 0;
+  color: #999999;
+}
+
+body .main .taskIntro .taskItems > li > i {
+  color: #000;
+}
+
+body .main .taskPosted .postHead {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+body .main .taskPosted .taskPosterProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .taskPosted .taskPosterProfile .profileImage {
+  width: 26px;
+  height: 26px;
+  margin: 0 10px 0 0;
+}
+
+body .main .taskPosted .taskPosterProfile .profileName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2770fb;
+  text-decoration: underline;
+}
+
+body .main .taskPosted .taskPosterProfile .profileWork {
+  font-size: 12px;
+}
+
+body .main .taskCompletebtn {
+  grid-column: 1/-1;
+}
+
+body .main .taskCompletebtn .taskButton {
+  width: 104px;
+  height: 34px;
+  background: #2770fb;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+body .main .taskCompletebtn .taskButton:hover {
+  background: #053fac;
+  cursor: pointer;
+}
+
+body .main .taskCompletebtn .taskButton:active {
+  background: #001c4e;
+}
+
+body .main .taskBody {
+  margin-top: 45px;
+  grid-column: 1/-1;
+}
+
+body .main .taskBody .taskTabHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  font-size: 14px;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+body .main .taskBody .taskTabHead .taskTabItem {
+  padding: 7px 24px;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  border-radius: 4px 4px 0 0;
+}
+
+body .main .taskBody .taskTabHead .taskTabItem:hover {
+  cursor: pointer;
+  background: whitesmoke;
+}
+
+body .main .taskBody .taskTabHead .active {
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  background: #fff;
+  color: #333333;
+  font-weight: 700;
+}
+
+body .main .taskBody .taskTabContent {
+  background: #fff;
+  border-radius: 4px;
+  min-height: 50vh;
+}
+
+body .main .taskBody .taskTabContent .tabContent {
+  padding: 20px 30px;
+}
+
+body .main .taskBody .taskTabContent .tabContent .taskUpdateButton {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #2770fb;
+  width: 50px;
+  margin-left: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body .main .taskBody .taskTabContent .tabContent .taskUpdateButton:hover {
+  cursor: pointer;
+  color: #053fac;
+}
+
+body .main .taskBody .taskTabContent .tabContent .taskUpdateButton:active {
+  color: #001c4e;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList {
+  margin: 25px 0 0 0;
+  padding: 0 0 0 16px;
+  list-style-type: none;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem {
+  margin: 0 0 35px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem .calendarItemDate {
+  color: #333333;
+  font-weight: 600;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem .calendarItemDate .date {
+  font-size: 24px;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem .calendarItemDate .month {
+  font-size: 14px;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItemShedule {
+  margin: 0 0 0 51px;
+  padding: 10px 24px;
+  width: 100%;
+}
+
+body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItemShedule .sheduleTime {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  color: #333333;
+  background: rgba(39, 112, 251, 0.1);
+  border-radius: 84px;
+  width: 150px;
+  height: 30px;
+  margin: 3px 4px;
+  color: #333333;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
