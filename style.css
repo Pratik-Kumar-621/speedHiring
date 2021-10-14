@@ -4,6 +4,8 @@ body {
   background: #e5e5e5;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 300px auto;
+      grid-template-columns: 300px auto;
   font-family: "Manrope", sans-serif;
 }
 
@@ -325,6 +327,186 @@ body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sh
 
 body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .feedback:active {
   color: #001c4e;
+}
+
+body .main .taskBody .taskTabContent .feedback {
+  padding: 20px;
+}
+
+body .main .taskBody .taskTabContent .feedback .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn {
+  padding: 0 10px;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile .feedbackProfileImage {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile .feedbackProfileName {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio {
+  background: #eeeeee;
+  padding: 15px;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .vedio {
+  display: inline-block;
+  width: 176px;
+  height: 104px;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .recommendVedio {
+  font-size: 12px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes,
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no {
+  margin: 6px 0;
+  width: 85px;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no {
+  background: #bb0000;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no:hover {
+  background: #d60808;
+  cursor: pointer;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no:active {
+  background: #6d0606;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes {
+  background: green;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes:hover {
+  cursor: pointer;
+  background: #05a205;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes:active {
+  background: #014b01;
+}
+
+body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .completedDate {
+  font-size: 10px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills {
+  padding: 0 10px;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillHead {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody {
+  padding: 10px;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem {
+  margin: 5px 0;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemName,
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemPercent {
+  font-size: 12px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemBar {
+  width: 163px;
+  height: 4px;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemBar .successbar {
+  height: 4px;
+  background: #2770fb;
+  border-radius: 4px;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback {
+  padding: 0 10px;
+  margin-top: 14px;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationHead,
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackHead,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationHead,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackHead {
+  font-size: 14px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationBody,
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackBody,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationBody,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody {
+  padding: 6px 0px;
+}
+
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationBody .feedbackItems,
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackBody .feedbackItems,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationBody .feedbackItems,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody .feedbackItems {
+  margin: 0 0 10px 0;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #333333;
+  width: 95%;
+  min-height: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
 }
 
 [data-tab-content] {
