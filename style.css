@@ -4,8 +4,6 @@ body {
   background: #e5e5e5;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px auto;
-      grid-template-columns: 300px auto;
   font-family: "Manrope", sans-serif;
 }
 
@@ -142,11 +140,12 @@ body .main .taskBody .taskTabContent {
   min-height: 50vh;
 }
 
-body .main .taskBody .taskTabContent .tabContent {
+body .main .taskBody .taskTabContent .calander {
   padding: 20px 30px;
 }
 
-body .main .taskBody .taskTabContent .tabContent .taskUpdateButton {
+body .main .taskBody .taskTabContent .calander .taskUpdateButton {
+  display: block;
   text-align: right;
   font-size: 14px;
   font-weight: 600;
@@ -159,48 +158,48 @@ body .main .taskBody .taskTabContent .tabContent .taskUpdateButton {
   transition: all 0.2s ease-in-out;
 }
 
-body .main .taskBody .taskTabContent .tabContent .taskUpdateButton:hover {
+body .main .taskBody .taskTabContent .calander .taskUpdateButton:hover {
   cursor: pointer;
   color: #053fac;
 }
 
-body .main .taskBody .taskTabContent .tabContent .taskUpdateButton:active {
+body .main .taskBody .taskTabContent .calander .taskUpdateButton:active {
   color: #001c4e;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList {
+body .main .taskBody .taskTabContent .calander .calendarList {
   margin: 25px 0 0 0;
   padding: 0 0 0 16px;
   list-style-type: none;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem {
+body .main .taskBody .taskTabContent .calander .calendarList .calendarItem {
   margin: 0 0 35px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem .calendarItemDate {
+body .main .taskBody .taskTabContent .calander .calendarList .calendarItem .calendarItemDate {
   color: #333333;
   font-weight: 600;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem .calendarItemDate .date {
+body .main .taskBody .taskTabContent .calander .calendarList .calendarItem .calendarItemDate .date {
   font-size: 24px;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItem .calendarItemDate .month {
+body .main .taskBody .taskTabContent .calander .calendarList .calendarItem .calendarItemDate .month {
   font-size: 14px;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItemShedule {
+body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedule {
   margin: 0 0 0 51px;
   padding: 10px 24px;
   width: 100%;
 }
 
-body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItemShedule .sheduleTime {
+body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedule .sheduleTime {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -218,6 +217,114 @@ body .main .taskBody .taskTabContent .tabContent .calendarList .calendarItemShed
   height: 30px;
   margin: 3px 4px;
   color: #333333;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList {
+  width: 100%;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleNav {
+  border-bottom: 1px solid #cccccc;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleNav .sheduleNavItems {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleNav .sheduleNavItems:nth-child(1) {
+  padding-left: 30px;
+  text-align: left;
+  width: 33%;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents {
+  margin: 10px 0;
+  text-align: center;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents:nth-child(1) {
+  padding-left: 30px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleItemDate {
+  color: #333333;
+  font-weight: 600;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleItemDate .date {
+  font-size: 24px;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleItemDate .month {
+  font-size: 14px;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleTime {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  color: #333333;
+  background: rgba(39, 112, 251, 0.1);
+  border-radius: 84px;
+  width: 150px;
+  height: 30px;
+  margin: 0 0 0 21px;
+  color: #333333;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .completed {
+  width: 100px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #038300;
+  background: rgba(3, 131, 0, 0.1);
+  border-radius: 4px;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .feedback {
+  font-weight: 600;
+  font-size: 14px;
+  color: #2770fb;
+  text-decoration: underline;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .feedback:hover {
+  cursor: pointer;
+  color: #053fac;
+}
+
+body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .feedback:active {
+  color: #001c4e;
 }
 
 [data-tab-content] {
