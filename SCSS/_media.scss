@@ -1,0 +1,157 @@
+@media all and (max-width: 800px) {
+  body {
+    .main {
+      grid-template-columns: 1fr;
+      .taskIntro {
+        .taskItems {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+      .taskPosted {
+        margin: 12px 0 15px 0;
+      }
+      .taskBody {
+        .scrool {
+          width: 100%;
+          overflow-x: scroll;
+        }
+        .taskTabHead {
+          width: 200%;
+          .taskTabItem {
+            width: 25%;
+            text-align: center;
+            padding: 7px 0px;
+          }
+        }
+        .taskTabContent {
+          .calander {
+            .calendarList {
+              .calendarItemShedule {
+                margin: 0 0 0 0;
+                padding: 0px 0px;
+              }
+            }
+          }
+
+          .shedule {
+            .sheduleList {
+              .sheduleNav {
+                .sheduleNavItems {
+                  font-size: 12px;
+                  &:nth-child(1) {
+                    padding-left: 0px;
+                    text-align: center;
+                  }
+                }
+              }
+              .sheduleListItems {
+                .sheduleListComponents {
+                  &:nth-child(1) {
+                    padding-left: 0px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                  }
+                  .sheduleItemDate {
+                    margin-bottom: 5px;
+                    .date {
+                      font-size: 18px;
+                    }
+                    .month {
+                      font-size: 12px;
+                    }
+                  }
+                  .sheduleTime {
+                    font-size: 10px;
+                    width: 120px;
+                    height: 24px;
+                  }
+                  .completed {
+                    width: 80px;
+
+                    height: 27px;
+
+                    font-size: 10px;
+                  }
+                  .feedback {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+
+          .feedback {
+            .grid {
+              grid-template-columns: 1fr;
+              .completedOn {
+                margin-bottom: 16px;
+              }
+              .feedbackRecommendations,
+              .feedbackFeedback {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 520px) {
+  body {
+    .main {
+      grid-template-columns: 1fr;
+      .taskIntro {
+        .taskItems {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+      .taskPosted {
+        margin: 12px 0 15px 0;
+      }
+      .taskBody {
+        .scrool {
+          width: 100%;
+          overflow-x: scroll;
+        }
+        .taskTabHead {
+          width: 400%;
+          .taskTabItem {
+            width: 25%;
+            text-align: center;
+            padding: 7px 0px;
+          }
+        }
+        .taskTabContent {
+          .calander {
+            .calendarList {
+              .calendarItem {
+                .calendarItemDate {
+                  .date {
+                    font-size: 18px;
+                  }
+                  .month {
+                    font-size: 12px;
+                  }
+                }
+              }
+              .calendarItemShedule {
+                .sheduleTime {
+                  font-size: 10px;
+
+                  width: 120px;
+                  height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

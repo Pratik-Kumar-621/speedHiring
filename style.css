@@ -4,8 +4,6 @@ body {
   background: #e5e5e5;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px auto;
-      grid-template-columns: 300px auto;
   font-family: "Manrope", sans-serif;
 }
 
@@ -32,14 +30,14 @@ body .main .taskIntro .taskItems {
   padding: 0;
 }
 
-body .main .taskIntro .taskItems > li {
+body .main .taskIntro .taskItems li {
   font-size: 12px;
   font-weight: 600;
-  padding: 0 12px 0 0;
+  padding: 0 18px 0 0;
   color: #999999;
 }
 
-body .main .taskIntro .taskItems > li > i {
+body .main .taskIntro .taskItems li > i {
   color: #000;
 }
 
@@ -199,6 +197,13 @@ body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedul
   margin: 0 0 0 51px;
   padding: 10px 24px;
   width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (160px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 160px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedule .sheduleTime {
@@ -217,7 +222,7 @@ body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedul
   border-radius: 84px;
   width: 150px;
   height: 30px;
-  margin: 3px 4px;
+  margin: 3px 5px;
   color: #333333;
 }
 
@@ -338,13 +343,19 @@ body .main .taskBody .taskTabContent .feedback .grid {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #8d8b8b;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn {
+body .main .taskBody .taskTabContent .feedback .grid:last-child {
+  border-bottom: none;
+}
+
+body .main .taskBody .taskTabContent .feedback .grid .completedOn {
   padding: 0 10px;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackProfile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,36 +365,36 @@ body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile {
   margin-bottom: 8px;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile .feedbackProfileImage {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackProfile .feedbackProfileImage {
   width: 26px;
   height: 26px;
   border-radius: 50%;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackProfile .feedbackProfileName {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackProfile .feedbackProfileName {
   font-weight: bold;
   font-size: 14px;
   color: #333333;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio {
   background: #eeeeee;
   padding: 15px;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .vedio {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .vedio {
   display: inline-block;
   width: 176px;
   height: 104px;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .recommendVedio {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .recommendVedio {
   font-size: 12px;
   color: #333333;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes,
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .yes,
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .no {
   margin: 6px 0;
   width: 85px;
   height: 34px;
@@ -404,107 +415,107 @@ body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no {
   transition: all 0.2s linear;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .no {
   background: #bb0000;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no:hover {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .no:hover {
   background: #d60808;
   cursor: pointer;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .no:active {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .no:active {
   background: #6d0606;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .yes {
   background: green;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes:hover {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .yes:hover {
   cursor: pointer;
   background: #05a205;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .yes:active {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .yes:active {
   background: #014b01;
 }
 
-body .main .taskBody .taskTabContent .feedback .completedOn .feedbackVedio .completedDate {
+body .main .taskBody .taskTabContent .feedback .grid .completedOn .feedbackVedio .completedDate {
   font-size: 10px;
   color: #333333;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills {
   padding: 0 10px;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillHead {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillHead {
   font-weight: bold;
   font-size: 14px;
   color: #333333;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillBody {
   padding: 10px;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillBody .skillItem {
   margin: 5px 0;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemName,
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemPercent {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillBody .skillItem .skillItemName,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillBody .skillItem .skillItemPercent {
   font-size: 12px;
   color: #333333;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemBar {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillBody .skillItem .skillItemBar {
   width: 163px;
   height: 4px;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackSkills .skillBody .skillItem .skillItemBar .successbar {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackSkills .skillBody .skillItem .skillItemBar .successbar {
   height: 4px;
   background: #2770fb;
   border-radius: 4px;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback {
   padding: 0 10px;
   margin-top: 14px;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationHead,
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackHead,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationHead,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackHead {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .recommendationHead,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .feedbackHead,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .recommendationHead,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedbackHead {
   font-size: 14px;
   color: #333333;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationBody,
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackBody,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationBody,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .recommendationBody,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .feedbackBody,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .recommendationBody,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedbackBody {
   padding: 6px 0px;
 }
 
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationBody .recommendationItems,
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .recommendationBody .feedbackItems,
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackBody .recommendationItems,
-body .main .taskBody .taskTabContent .feedback .feedbackRecommendations .feedbackBody .feedbackItems,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationBody .recommendationItems,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .recommendationBody .feedbackItems,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody .recommendationItems,
-body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody .feedbackItems {
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .recommendationBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .recommendationBody .feedbackItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .feedbackBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations .feedbackBody .feedbackItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .recommendationBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .recommendationBody .feedbackItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedbackBody .recommendationItems,
+body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedbackBody .feedbackItems {
   margin: 0 0 10px 0;
   padding: 6px 10px;
   font-size: 12px;
   color: #333333;
   width: 95%;
-  min-height: 30px;
+  min-height: 60px;
   border: 1px solid #cccccc;
   border-radius: 4px;
 }
@@ -515,5 +526,130 @@ body .main .taskBody .taskTabContent .feedback .feedbackFeedback .feedbackBody .
 
 .active[data-tab-content] {
   display: block;
+}
+
+@media all and (max-width: 800px) {
+  body .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .main .taskIntro .taskItems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  body .main .taskPosted {
+    margin: 12px 0 15px 0;
+  }
+  body .main .taskBody .scrool {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  body .main .taskBody .taskTabHead {
+    width: 200%;
+  }
+  body .main .taskBody .taskTabHead .taskTabItem {
+    width: 25%;
+    text-align: center;
+    padding: 7px 0px;
+  }
+  body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedule {
+    margin: 0 0 0 0;
+    padding: 0px 0px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleNav .sheduleNavItems {
+    font-size: 12px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleNav .sheduleNavItems:nth-child(1) {
+    padding-left: 0px;
+    text-align: center;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents:nth-child(1) {
+    padding-left: 0px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleItemDate {
+    margin-bottom: 5px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleItemDate .date {
+    font-size: 18px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleItemDate .month {
+    font-size: 12px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .sheduleTime {
+    font-size: 10px;
+    width: 120px;
+    height: 24px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .completed {
+    width: 80px;
+    height: 27px;
+    font-size: 10px;
+  }
+  body .main .taskBody .taskTabContent .shedule .sheduleList .sheduleListItems .sheduleListComponents .feedback {
+    font-size: 12px;
+  }
+  body .main .taskBody .taskTabContent .feedback .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .main .taskBody .taskTabContent .feedback .grid .completedOn {
+    margin-bottom: 16px;
+  }
+  body .main .taskBody .taskTabContent .feedback .grid .feedbackRecommendations,
+  body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback {
+    margin-top: 0;
+  }
+}
+
+@media all and (max-width: 520px) {
+  body .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .main .taskIntro .taskItems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  body .main .taskPosted {
+    margin: 12px 0 15px 0;
+  }
+  body .main .taskBody .scrool {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  body .main .taskBody .taskTabHead {
+    width: 400%;
+  }
+  body .main .taskBody .taskTabHead .taskTabItem {
+    width: 25%;
+    text-align: center;
+    padding: 7px 0px;
+  }
+  body .main .taskBody .taskTabContent .calander .calendarList .calendarItem .calendarItemDate .date {
+    font-size: 18px;
+  }
+  body .main .taskBody .taskTabContent .calander .calendarList .calendarItem .calendarItemDate .month {
+    font-size: 12px;
+  }
+  body .main .taskBody .taskTabContent .calander .calendarList .calendarItemShedule .sheduleTime {
+    font-size: 10px;
+    width: 120px;
+    height: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

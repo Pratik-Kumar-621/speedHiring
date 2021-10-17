@@ -9,7 +9,7 @@ body {
   padding: 0;
   background: #e5e5e5;
   display: grid;
-  grid-template-columns: 300px auto;
+  // grid-template-columns: 300px auto;
   font-family: "Manrope", sans-serif;
   .main {
     display: grid;
@@ -25,12 +25,13 @@ body {
       .taskItems {
         list-style-type: none;
         display: flex;
+
         margin: 5px 0;
         padding: 0;
-        > li {
+        li {
           font-size: 12px;
           font-weight: 600;
-          padding: 0 12px 0 0;
+          padding: 0 18px 0 0;
           color: #999999;
           > i {
             color: #000;
@@ -160,6 +161,9 @@ body {
               margin: 0 0 0 51px;
               padding: 10px 24px;
               width: 100%;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, 160px);
+              justify-content: center;
               .sheduleTime {
                 display: inline-flex;
                 justify-content: center;
@@ -170,7 +174,7 @@ body {
                 border-radius: 84px;
                 width: 150px;
                 height: 30px;
-                margin: 3px 4px;
+                margin: 3px 5px;
                 color: #333333;
               }
             }
@@ -264,125 +268,131 @@ body {
           .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-          }
-          .completedOn {
-            padding: 0 10px;
-            .feedbackProfile {
-              display: flex;
-              align-items: center;
-              margin-bottom: 8px;
-              .feedbackProfileImage {
-                width: 26px;
-                height: 26px;
-                border-radius: 50%;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #8d8b8b;
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .completedOn {
+              padding: 0 10px;
+              .feedbackProfile {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                .feedbackProfileImage {
+                  width: 26px;
+                  height: 26px;
+                  border-radius: 50%;
+                }
+                .feedbackProfileName {
+                  font-weight: bold;
+                  font-size: 14px;
+                  color: #333333;
+                }
               }
-              .feedbackProfileName {
+              .feedbackVedio {
+                background: #eeeeee;
+                padding: 15px;
+                .vedio {
+                  display: inline-block;
+                  width: 176px;
+                  height: 104px;
+                }
+                .recommendVedio {
+                  font-size: 12px;
+                  color: #333333;
+                }
+                .yes,
+                .no {
+                  margin: 6px 0;
+                  width: 85px;
+                  height: 34px;
+                  @include flexCenter;
+                  font-size: 12px;
+                  color: #ffffff;
+                  border: none;
+                  border-radius: 4px;
+                  transition: all 0.2s linear;
+                }
+                .no {
+                  background: #bb0000;
+                  &:hover {
+                    background: #d60808;
+                    cursor: pointer;
+                  }
+                  &:active {
+                    background: #6d0606;
+                  }
+                }
+                .yes {
+                  background: green;
+                  &:hover {
+                    cursor: pointer;
+                    background: rgb(5, 162, 5);
+                  }
+                  &:active {
+                    background: rgb(1, 75, 1);
+                  }
+                }
+                .completedDate {
+                  font-size: 10px;
+                  color: #333333;
+                }
+              }
+            }
+            .feedbackSkills {
+              padding: 0 10px;
+              .skillHead {
                 font-weight: bold;
                 font-size: 14px;
                 color: #333333;
               }
-            }
-            .feedbackVedio {
-              background: #eeeeee;
-              padding: 15px;
-              .vedio {
-                display: inline-block;
-                width: 176px;
-                height: 104px;
-              }
-              .recommendVedio {
-                font-size: 12px;
-                color: #333333;
-              }
-              .yes,
-              .no {
-                margin: 6px 0;
-                width: 85px;
-                height: 34px;
-                @include flexCenter;
-                font-size: 12px;
-                color: #ffffff;
-                border: none;
-                border-radius: 4px;
-                transition: all 0.2s linear;
-              }
-              .no {
-                background: #bb0000;
-                &:hover {
-                  background: #d60808;
-                  cursor: pointer;
-                }
-                &:active {
-                  background: #6d0606;
-                }
-              }
-              .yes {
-                background: green;
-                &:hover {
-                  cursor: pointer;
-                  background: rgb(5, 162, 5);
-                }
-                &:active {
-                  background: rgb(1, 75, 1);
-                }
-              }
-              .completedDate {
-                font-size: 10px;
-                color: #333333;
-              }
-            }
-          }
-          .feedbackSkills {
-            padding: 0 10px;
-            .skillHead {
-              font-weight: bold;
-              font-size: 14px;
-              color: #333333;
-            }
-            .skillBody {
-              padding: 10px;
-              .skillItem {
-                margin: 5px 0;
-                .skillItemName,
-                .skillItemPercent {
-                  font-size: 12px;
-                  color: #333333;
-                }
-                .skillItemBar {
-                  width: 163px;
-                  height: 4px;
-
-                  .successbar {
+              .skillBody {
+                padding: 10px;
+                .skillItem {
+                  margin: 5px 0;
+                  .skillItemName,
+                  .skillItemPercent {
+                    font-size: 12px;
+                    color: #333333;
+                  }
+                  .skillItemBar {
+                    width: 163px;
                     height: 4px;
-                    background: #2770fb;
-                    border-radius: 4px;
+
+                    .successbar {
+                      height: 4px;
+                      background: #2770fb;
+                      border-radius: 4px;
+                    }
                   }
                 }
               }
             }
-          }
-          .feedbackRecommendations,
-          .feedbackFeedback {
-            padding: 0 10px;
-            margin-top: 14px;
-            .recommendationHead,
-            .feedbackHead {
-              font-size: 14px;
-              color: #333333;
-            }
-            .recommendationBody,
-            .feedbackBody {
-              padding: 6px 0px;
-              .recommendationItems,
-              .feedbackItems {
-                margin: 0 0 10px 0;
-                padding: 6px 10px;
-                font-size: 12px;
+            .feedbackRecommendations,
+            .feedbackFeedback {
+              padding: 0 10px;
+              margin-top: 14px;
+              .recommendationHead,
+              .feedbackHead {
+                font-size: 14px;
                 color: #333333;
-                width: 95%;
-                min-height: 30px;
-                border: 1px solid #cccccc;
-                border-radius: 4px;
+              }
+              .recommendationBody,
+              .feedbackBody {
+                padding: 6px 0px;
+                .recommendationItems,
+                .feedbackItems {
+                  margin: 0 0 10px 0;
+                  padding: 6px 10px;
+                  font-size: 12px;
+                  color: #333333;
+                  width: 95%;
+                  min-height: 60px;
+                  border: 1px solid #cccccc;
+                  border-radius: 4px;
+                }
               }
             }
           }
@@ -398,3 +408,5 @@ body {
 .active[data-tab-content] {
   display: block;
 }
+
+@import "./SCSS/media";
