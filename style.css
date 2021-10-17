@@ -547,7 +547,7 @@ body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedback
     overflow-x: scroll;
   }
   body .main .taskBody .taskTabHead {
-    width: 200%;
+    width: 180%;
   }
   body .main .taskBody .taskTabHead .taskTabItem {
     width: 25%;
@@ -633,7 +633,7 @@ body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedback
     overflow-x: scroll;
   }
   body .main .taskBody .taskTabHead {
-    width: 400%;
+    width: 360%;
   }
   body .main .taskBody .taskTabHead .taskTabItem {
     width: 25%;
