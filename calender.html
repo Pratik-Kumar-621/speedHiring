@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Task</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="side"></div>
+    <div class="main">
+
+
+
+        <div class="taskBody">
+            <div class="scrool">
+
+                <ul class="taskTabHead">
+                    <li data-tab-target="#tab-1" class="taskTabItem active">Interview Task Calendar</li>
+                    <li data-tab-target="#tab-2" class="taskTabItem">Calander List</li>
+                    <li data-tab-target="#tab-3" class="taskTabItem">Feedback</li>
+                    <li data-tab-target="#tab-4" class="taskTabItem">Communication</li>
+                </ul>
+            </div>
+            <div class="taskTabContent">
+
+                <div class="tabContent active calander" id="tab-1" data-tab-content>
+
+                </div>
+
+                <div class="tabContent shedule" id="tab-2" data-tab-content>
+                    <table class="sheduleList">
+                        <thead class="sheduleNav">
+                            <tr>
+                                <th style="width: auto;" class="sheduleNavItems">NAME</th>
+                                <th class="sheduleNavItems">EXPERIENCE</th>
+                                <th class="sheduleNavItems">RESUME</th>
+                                <th class="sheduleNavItems">INTERVIEW SHEDULE</th>
+                                <th class="sheduleNavItems">INTERVIEW</th>
+                                <th class="sheduleNavItems">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sheduleListItems">
+
+                            <tr>
+                                <td class="sheduleListComponents">
+                                    Jhone Doe
+                                </td>
+                                <td class="sheduleListComponents">
+                                    5
+                                </td>
+                                <td class="sheduleListComponents">
+                                    <a class="eye" href=""><i class="fas fa-eye"></i></a>
+                                </td>
+                                <td class="sheduleListComponents">
+                                    <div class="sheduleTime">
+                                        02:30 pm - 03:00 pm
+                                    </div>
+                                </td>
+                                <td class="sheduleListComponents">
+                                    <div class="completed">
+                                        <i class="fas fa-check-circle"></i>&nbsp;&nbsp;Completed
+                                    </div>
+                                </td>
+                                <td class="sheduleListComponents">
+                                    <a class="feedback" href="">View Feedback</a>
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tabContent feedback" id="tab-3" data-tab-content>
+
+
+                </div>
+
+                <div class="tabContent" id="tab-4" data-tab-content>4</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+
+</html>

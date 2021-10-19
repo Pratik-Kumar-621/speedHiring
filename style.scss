@@ -408,5 +408,11 @@ body {
 .active[data-tab-content] {
   display: block;
 }
+.eye {
+  display: inline-block;
+  border: 2px solid #007bff;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
 
 @import "./SCSS/media";

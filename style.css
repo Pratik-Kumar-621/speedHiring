@@ -528,6 +528,13 @@ body .main .taskBody .taskTabContent .feedback .grid .feedbackFeedback .feedback
   display: block;
 }
 
+.eye {
+  display: inline-block;
+  border: 2px solid #007bff;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
 @media all and (max-width: 800px) {
   body .main {
     -ms-grid-columns: 1fr;
